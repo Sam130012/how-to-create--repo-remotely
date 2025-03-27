@@ -1,0 +1,9 @@
+mkdir my-new-project
+cd my-new-project
+git init
+echo "# My New Project" > README.md
+git add .
+git commit -m "Initial commit"
+curl -u "YOUR_USERNAME:YOUR_PERSONAL_ACCESS_TOKEN" https://api.github.com/user/repos -d '{"name":"my-new-project","private":false}'
+git remote add origin https://github.com/YOUR_USERNAME/my-new-project.git
+git push -u origin master  # or main if your default branch is main
